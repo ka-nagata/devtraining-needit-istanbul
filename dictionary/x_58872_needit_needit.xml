@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="4" type="collection">
+        <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="legal" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element label="人事部" sequence="0" value="hr"/>
+                <element label="施設部" sequence="1" value="facilities"/>
+                <element label="法務部" sequence="2" value="legal"/>
+                <element label="あなたの部門の選択" sequence="3" value="your_choice"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="legal1" label="必要なもの" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element label="人事部1" sequence="0" value="hr1"/>
+                <element label="人事部2" sequence="1" value="hr2"/>
+                <element label="施設部1" sequence="2" value="facilities1"/>
+                <element label="施設部2" sequence="3" value="facilities2"/>
+                <element label="法務部1" sequence="4" value="legal1"/>
+                <element label="法務部2" sequence="5" value="legal2"/>
+                <element label="あなたの部署の選択1" sequence="6" value="your_choice1"/>
+                <element label="あなたの部署の選択2" sequence="7" value="your_choice2"/>
+            </choice>
+        </element>
+        <element label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
